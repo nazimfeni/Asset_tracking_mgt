@@ -10,7 +10,7 @@ class AssetController extends Controller
     public function index()
     {
         $assets = Asset::all();
-        return view('assets.index', compact('assets'));
+        return view('assets.index', compact('assets',));
     }
 
     public function create()

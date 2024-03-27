@@ -18,4 +18,9 @@ class Asset extends Model
         'used_by',
         'status',
     ];
+     // Define the asset type relationship
+     public function assetType()
+     {
+         return $this->belongsTo(AssetType::class, 'asset_type_id');
+     }
 }

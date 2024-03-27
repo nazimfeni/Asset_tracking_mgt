@@ -26,7 +26,7 @@
                             @foreach ($assets as $asset)
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">{{ $asset->id }}</td>
-                                    <td class="px-6 py-4 whitespace-nowrap">{{ $asset->asset_type_id }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">{{ $asset->assetType->name }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">{{ $asset->description }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">{{ $asset->purchase_date }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">{{ $asset->purchase_price }}</td>
@@ -35,13 +35,13 @@
                                     <td class="px-6 py-4 whitespace-nowrap">{{ $asset->used_by }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">{{ $asset->status }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-    <a href="{{ route('assets.edit', $asset->id) }}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-    <form action="{{ route('assets.destroy', $asset->id) }}" method="POST" class="inline">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="text-red-600 hover:text-red-900">Delete</button>
-    </form>
-</td>
+                                    <a href="{{ route('assets.edit', $asset->id) }}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    <form action="{{ route('assets.destroy', $asset->id) }}" method="POST" class="inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="text-red-600 hover:text-red-900">Delete</button>
+                                    </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
