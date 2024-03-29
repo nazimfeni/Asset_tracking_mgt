@@ -31,21 +31,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-Route::resource('assets', AssetController::class)->names([
-    'index' => 'assets.index',
-    'create' => 'assets.create',
-    'store' => 'assets.store',
-    //'show' => 'assets.show',
-    'edit' => 'assets.edit',
-    'update' => 'assets.update',
-    'destroy' => 'assets.destroy',
-]);
-Route::resource('asset-types', AssetTypeController::class)->names([
-    'index' => 'asset-types.index',
-    'create' => 'asset-types.create',
-    'store' => 'asset-types.store',
-    'show' => 'asset-types.show',
-    'edit' => 'asset-types.edit',
-    'update' => 'asset-types.update',
-    'destroy' => 'asset-types.destroy',
-]);
+
+
+// Include route files
+require __DIR__.'/assets.php';
+require __DIR__.'/asset-types.php';
