@@ -9,8 +9,8 @@ class AssetController extends Controller
 {
     public function index()
     {
-        $assets = Asset::all();
-        return view('assets.index', compact('assets',));
+        $assets = Asset::paginate(5); // Assuming you want 10 items per page
+        return view('assets.index', compact('assets'));
     }
 
     public function create()

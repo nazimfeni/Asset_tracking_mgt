@@ -80,6 +80,15 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('assets.create')" :active="request()->routeIs('dashboard')">
+                {{ __('Asset') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('assets.index')" :active="request()->routeIs('dashboard')">
+                {{ __('Asset List') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('asset-types.create')" :active="request()->routeIs('dashboard')">
+                {{ __('Asset Type') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

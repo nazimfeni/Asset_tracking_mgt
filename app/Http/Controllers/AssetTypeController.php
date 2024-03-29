@@ -25,7 +25,7 @@ class AssetTypeController extends Controller
      */
     public function create()
     {
-        return view('asset_types.create');
+        return view('assettype.create');
     }
 
     /**
