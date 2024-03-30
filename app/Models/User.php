@@ -33,6 +33,10 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function isSuperadmin()
+    {
+        return $this->role === 'superadmin'; // Assuming 'superadmin' is the role for super administrators
+    }
 
     /**
      * The attributes that should be cast.

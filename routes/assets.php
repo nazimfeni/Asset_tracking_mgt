@@ -12,3 +12,5 @@ Route::resource('assets', AssetController::class)->names([
     'update' => 'assets.update',
     'destroy' => 'assets.destroy',
 ]);
+
+Route::get('/assets/export/{format?}', [AssetController::class, 'export'])->name('assets.export');

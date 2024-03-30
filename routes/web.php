@@ -36,3 +36,4 @@ require __DIR__.'/auth.php';
 // Include route files
 require __DIR__.'/assets.php';
 require __DIR__.'/asset-types.php';
+
