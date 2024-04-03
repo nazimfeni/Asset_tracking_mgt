@@ -19,7 +19,9 @@ use App\Http\Controllers\AssetTypeController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/about', function () {
+    return view('about'); // Assuming 'about.blade.php' is your about page view file
+})->name('about');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

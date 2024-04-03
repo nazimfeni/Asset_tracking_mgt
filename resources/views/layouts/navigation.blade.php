@@ -7,6 +7,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                              <!-- <img src="images/assetlogo.png" class="img-fluid logo-image"> -->
                     </a>
                 </div>
                 
@@ -41,10 +42,14 @@
                             
                             </x-slot>
                         </x-dropdown>
-             </div>
+                 </div>
              
                     <x-nav-link :href="route('asset-types.create')">
                         {{ __('Asset Type Entry') }}
+                    </x-nav-link>
+                    
+                    <x-nav-link :href="route('about')">
+                        {{ __('About Us') }}
                     </x-nav-link>
                
                 </div>
@@ -100,18 +105,34 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('assets.create')" :active="request()->routeIs('assets.create')">
-                {{ __('Asset Entry') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('assets.index')" :active="request()->routeIs('assets.index')">
-                {{ __('Asset List') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('asset-types.create')" :active="request()->routeIs('asset-types.create')">
-                {{ __('Asset Type Entry') }}
-            </x-responsive-nav-link>
+        <div class="sm:flex sm:items-center sm:ml-6">
+            <x-dropdown align="left" width="48">
+                <!-- Trigger -->
+                <x-slot name="trigger">
+                    <button @click="openDropdown = !openDropdown" class="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-transparent rounded-md px-3 py-2 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition duration-150 ease-in-out">
+                        <div>  {{ __('Asset') }}</div>
+                        <div class="ml-1">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </button>
+                </x-slot>
+
+                <!-- Dropdown content -->
+                <x-slot name="content">
+                    <x-dropdown-link :href="route('assets.create')">
+                    {{ __('Asset Entry') }}
+                    </x-dropdown-link>
+                    <x-dropdown-link :href="route('assets.index')">
+                    {{ __('Asset List') }}
+                    </x-dropdown-link>
+                
+                </x-slot>
+            </x-dropdown>
+            <x-nav-link :href="route('asset-types.create')">
+                        {{ __('Asset Type Entry') }}
+                    </x-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

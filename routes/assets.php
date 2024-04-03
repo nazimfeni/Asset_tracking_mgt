@@ -14,3 +14,5 @@ Route::resource('assets', AssetController::class)->names([
 ]);
 
 Route::get('/assets/export/{format?}', [AssetController::class, 'export'])->name('assets.export');
+Route::get('/assets/filter', 'AssetController@filter')->name('assets.filter');
+
