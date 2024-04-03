@@ -38,7 +38,7 @@ Bootstrap 5 HTML CSS Template
     </head>
     
     <body id="top">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="images/assetlogo.png" class="img-fluid logo-image">
@@ -66,6 +66,7 @@ Bootstrap 5 HTML CSS Template
         </div>
     </div>
 </nav>
+
 
 <main>
 
