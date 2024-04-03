@@ -10,21 +10,21 @@
         <title>ATMS</title>
 
         <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="{{asset('fonts.googleapis.com')}}">
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="{{asset('fonts.gstatic.com')}}" crossorigin>
 
-        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+        <link href="{{asset('fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap')}}" rel="stylesheet">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="{{asset('css/bootstrap-icons.css')}}" rel="stylesheet">
 
-        <link href="css/owl.carousel.min.css" rel="stylesheet">
+        <link href="{{asset('css/owl.carousel.min.css')}}" rel="stylesheet">
 
-        <link href="css/owl.theme.default.min.css" rel="stylesheet">
+        <link href="{{asset('css/owl.theme.default.min.css')}}" rel="stylesheet">
 
-        <link href="css/tooplate-gotto-job.css" rel="stylesheet">
+        <link href="{{asset('css/tooplate-gotto-job.css')}}" rel="stylesheet">
         
 <!--
 
@@ -40,7 +40,7 @@ Bootstrap 5 HTML CSS Template
     <body id="top">
     <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="images/assetlogo.png" class="img-fluid logo-image">
             <div class="d-flex flex-column">
                 <strong class="logo-text">ATMS</strong>
@@ -54,15 +54,6 @@ Bootstrap 5 HTML CSS Template
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav align-items-center ms-lg-5">
-               
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About US</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
 
                 <li class="nav-item ms-lg-auto">
                     <a class="nav-link" href="{{ route('register') }}">Register</a>
@@ -76,111 +67,24 @@ Bootstrap 5 HTML CSS Template
     </div>
 </nav>
 
-
-    <!-- <nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="images/assetlogo.png" class="img-fluid logo-image">
-            <div class="d-flex flex-column">
-                <strong class="logo-text">ATMS</strong>
-                <small class="logo-slogan">Asset Tracking System</small>
-            </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav align-items-center ms-lg-5">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About US</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-</ul>
-            @if (Route::has('login'))
-                <ul class="navbar-nav ms-lg-auto">
-                    @auth
-                        <li class="nav-item">
-                            <a href="{{ url('/dashboard') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Dashboard</a>
-                        </li>
-                    @else
-                        <li class="nav-item">
-                            <a href="{{ route('login') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Log in</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item ms-lg-auto">
-                                <a href="{{ route('register') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Register</a>
-                            </li>
-                        @endif
-                    @endauth
-                </ul>
-            @endif
-        </div>
-    </div>
-</nav> -->
-
-
-        <main>
+<main>
 
             <section class="hero-section d-flex justify-content-center align-items-center">
                 <div class="section-overlay"></div>
 
-                <div class="container">
+                <div class="container d-flex justify-content-center align-items-center">
                     <div class="row">
 
-                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                        <div class=" col-12 mb-5 mb-lg-0">
                             <div class="hero-section-text mt-5">
-                                <h6 class="text-white">Are you looking for your dream job?</h6>
-
-                                <h1 class="hero-title text-white mt-4 mb-4">Online Platform. <br> Best Job portal</h1>
+                                <h1 class="hero-title text-white mt-4 mb-4">Online Platform. <br> Asset Tracking System</h1>
 
                                 <a href="#categories-section" class="custom-btn custom-border-btn btn">Browse Categories</a>
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-12">
-                            <form class="custom-form hero-form" action="#" method="get" role="form">
-                                <h3 class="text-white mb-3">Search your dream job</h3>
-
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon1"><i class="bi-person custom-icon"></i></span>
-
-                                            <input type="text" name="job-title" id="job-title" class="form-control" placeholder="Job Title" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon2"><i class="bi-geo-alt custom-icon"></i></span>
-
-                                            <input type="text" name="job-location" id="job-location" class="form-control" placeholder="Location" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-12">
-                                        <button type="submit" class="form-control">
-                                            Find a job
-                                        </button>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="d-flex flex-wrap align-items-center mt-4 mt-lg-0">
-                                            <span class="text-white mb-lg-0 mb-md-0 me-2">Popular keywords:</span>
-
-                                            <div>
-                                                <a href="job-listings.html" class="badge">Web design</a>
-
-                                                <a href="job-listings.html" class="badge">Marketing</a>
-
-                                                <a href="job-listings.html" class="badge">Customer support</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                           
                         </div>
 
                     </div>
@@ -291,12 +195,12 @@ Bootstrap 5 HTML CSS Template
                             <div class="custom-text-block">
                                 <h2 class="text-white mb-2">Introduction Gotto</h2>
 
-                                <p class="text-white">Gotto Job is a free website template for job portals. This layout is based on Bootstrap 5 CSS framework. Thank you for visiting <a href="https://www.tooplate.com" target="_parent">Tooplate website</a>. Images are from <a href="https://www.freepik.com/" target="_blank">FreePik</a> website.</p>
+                                <p class="text-white">Gotto Job is a free website template for job portals. This layout is based on Bootstrap 5 CSS framework. Thank you for visiting <a href="#" target="_parent">Tooplate website</a>. Images are from <a href="#" target="_blank">FreePik</a> website.</p>
 
                                 <div class="custom-border-btn-wrap d-flex align-items-center mt-5">
-                                    <a href="about.html" class="custom-btn custom-border-btn btn me-4">Get to know us</a>
+                                    <a href="#" class="custom-btn custom-border-btn btn me-4">Get to know us</a>
 
-                                    <a href="#job-section" class="custom-link smoothscroll">Explore Jobs</a>
+                                    <a href="#" class="custom-link smoothscroll">Explore Jobs</a>
                                 </div>
                             </div>
                         </div>
@@ -639,11 +543,11 @@ Bootstrap 5 HTML CSS Template
         </footer>
 
         <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/counter.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="{{asset('js/jquery.min.js')}}"></script>
+        <script src="{{asset('js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('js/counter.js')}}"></script>
+        <script src="{{asset('js/custom.js')}}"></script>
 
     </body>
 </html>
