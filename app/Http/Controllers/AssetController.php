@@ -70,7 +70,7 @@ class AssetController extends Controller
 
         // Return the exported file based on the format
         if ($format === 'pdf') {
-            $assets = $export->collection();
+            $assets = $export->collection1();
             $headings = $export->headings();
 
             // Create a new Dompdf instance

@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>ATMS</title>
+        <title>About Gotto Job Portal</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,243 +35,115 @@ https://www.tooplate.com/view/2134-gotto-job
 Bootstrap 5 HTML CSS Template
 
 -->
+
     </head>
     
-    <body id="top">
+    <body class="about-page" id="top">
 
-    <nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="images/assetlogo.png" class="img-fluid logo-image">
-            <div class="d-flex flex-column">
-                <strong class="logo-text">ATMS</strong>
-                <small class="logo-slogan">Asset Tracking System</small>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/logo.png" class="img-fluid logo-image">
+
+                    <div class="d-flex flex-column">
+                        <strong class="logo-text">Gotto</strong>
+                        <small class="logo-slogan">Online Job Portal</small>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-center ms-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Homepage</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">About Gotto</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="job-listings.html">Job Listings</a></li>
+
+                                <li><a class="dropdown-item" href="job-details.html">Job Details</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-auto">
+                            <a class="nav-link" href="#">Register</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link custom-btn btn" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav align-items-center ms-lg-5">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About US</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-            @if (Route::has('login'))
-                <ul class="navbar-nav ms-lg-auto">
-                    @auth
-                        <li class="nav-item">
-                            <a href="{{ url('/dashboard') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Dashboard</a>
-                        </li>
-                    @else
-                        <li class="nav-item">
-                            <a href="{{ route('login') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Log in</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a href="{{ route('register') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Register</a>
-                            </li>
-                        @endif
-                    @endauth
-                </ul>
-            @endif
-        </div>
-    </div>
-</nav>
-
+        </nav>
 
         <main>
 
-            <section class="hero-section d-flex justify-content-center align-items-center">
+            <header class="site-header">
                 <div class="section-overlay"></div>
 
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                            <div class="hero-section-text mt-5">
-                                <h6 class="text-white">Are you looking for your dream job?</h6>
-
-                                <h1 class="hero-title text-white mt-4 mb-4">Online Platform. <br> Best Job portal</h1>
-
-                                <a href="#categories-section" class="custom-btn custom-border-btn btn">Browse Categories</a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <form class="custom-form hero-form" action="#" method="get" role="form">
-                                <h3 class="text-white mb-3">Search your dream job</h3>
-
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon1"><i class="bi-person custom-icon"></i></span>
-
-                                            <input type="text" name="job-title" id="job-title" class="form-control" placeholder="Job Title" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="basic-addon2"><i class="bi-geo-alt custom-icon"></i></span>
-
-                                            <input type="text" name="job-location" id="job-location" class="form-control" placeholder="Location" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12 col-12">
-                                        <button type="submit" class="form-control">
-                                            Find a job
-                                        </button>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="d-flex flex-wrap align-items-center mt-4 mt-lg-0">
-                                            <span class="text-white mb-lg-0 mb-md-0 me-2">Popular keywords:</span>
-
-                                            <div>
-                                                <a href="job-listings.html" class="badge">Web design</a>
-
-                                                <a href="job-listings.html" class="badge">Marketing</a>
-
-                                                <a href="job-listings.html" class="badge">Customer support</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="categories-section section-padding" id="categories-section">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-
+                        
                         <div class="col-lg-12 col-12 text-center">
-                            <h2 class="mb-5">Browse by <span>Categories</span></h2>
-                        </div>
+                            <h1 class="text-white">About Gotto</h1>
 
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-window"></i>
-                                
-                                    <small class="categories-block-title">Web design</small>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
 
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">320</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-twitch"></i>
-                                
-                                    <small class="categories-block-title">Marketing</small>
-
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">180</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-play-circle-fill"></i>
-                                
-                                    <small class="categories-block-title">Video</small>
-
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">340</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-globe"></i>
-                                
-                                    <small class="categories-block-title">Websites</small>
-
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">140</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <div class="categories-block">
-                                <a href="#" class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <i class="categories-icon bi-people"></i>
-                                
-                                    <small class="categories-block-title">Customer Support</small>
-
-                                    <div class="categories-block-number d-flex flex-column justify-content-center align-items-center">
-                                        <span class="categories-block-number-text">84</span>
-                                    </div>
-                                </a>
-                            </div>
+                                    <li class="breadcrumb-item active" aria-current="page">About</li>
+                                </ol>
+                            </nav>
                         </div>
 
                     </div>
                 </div>
-            </section>
+            </header>
 
 
             <section class="about-section">
                 <div class="container">
-                    <div class="row">
+                    <div class="row justify-content-center align-items-center">
 
-                        <div class="col-lg-3 col-12">
-                            <div class="about-image-wrap custom-border-radius-start">
-                                <img src="images/professional-asian-businesswoman-gray-blazer.jpg" class="about-image custom-border-radius-start img-fluid" alt="">
+                        <div class="col-lg-5 col-12">
+                            <div class="about-info-text">
+                                <h2 class="mb-0">Introducing Gotto Job</h2>
 
-                                <div class="about-info">
-                                    <h4 class="text-white mb-0 me-2">Julia Ward</h4>
+                                <h4 class="mb-2">Get hired. Get your new job</h4>
 
-                                    <p class="text-white mb-0">Investor</p>
+                                <p>Thank you for visiting our Gotto Job website. Are you looking for best HTML templates? Please visit Tooplate website to download free templates.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <a href="#services-section" class="custom-btn custom-border-btn btn me-4">Explore Services</a>
+
+                                    <a href="contact.html" class="custom-link smoothscroll">Contact</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-12">
-                            <div class="custom-text-block">
-                                <h2 class="text-white mb-2">Introduction Gotto</h2>
+                        <div class="col-lg-5 col-12 mt-5 mt-lg-0">
+                            <div class="about-image-wrap">
+                                <img src="images/horizontal-shot-happy-mixed-race-females.jpg" class="about-image about-image-border-radius img-fluid" alt="">
 
-                                <p class="text-white">Gotto Job is a free website template for job portals. This layout is based on Bootstrap 5 CSS framework. Thank you for visiting <a href="https://www.tooplate.com" target="_parent">Tooplate website</a>. Images are from <a href="https://www.freepik.com/" target="_blank">FreePik</a> website.</p>
+                                <div class="about-info d-flex">
+                                    <h4 class="text-white mb-0 me-2">20</h4>
 
-                                <div class="custom-border-btn-wrap d-flex align-items-center mt-5">
-                                    <a href="about.html" class="custom-btn custom-border-btn btn me-4">Get to know us</a>
-
-                                    <a href="#job-section" class="custom-link smoothscroll">Explore Jobs</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-12">
-                            <div class="instagram-block">
-                                <img src="images/horizontal-shot-happy-mixed-race-females.jpg" class="about-image custom-border-radius-end img-fluid" alt="">
-
-                                <div class="instagram-block-text">
-                                    <a href="https://instagram.com/" class="custom-btn btn">
-                                        <i class="bi-instagram"></i>
-                                        @Gotto
-                                    </a>
+                                    <p class="text-white mb-0">years of experience</p>
                                 </div>
                             </div>
                         </div>
@@ -281,11 +153,60 @@ Bootstrap 5 HTML CSS Template
             </section>
 
 
-           
+            <section class="services-section section-padding" id="services-section">
+                <div class="container">
+                    <div class="row">
 
+                        <div class="col-lg-12 col-12 text-center">
+                            <h2 class="mb-5">We deliver best services</h2>
+                        </div>
 
+                        <div class="services-block-wrap col-lg-4 col-md-6 col-12">
+                            <div class="services-block">
+                                <div class="services-block-title-wrap">
+                                    <i class="services-block-icon bi-window"></i>
+                                
+                                    <h4 class="services-block-title">Website design</h4>
+                                </div>
 
-           
+                                <div class="services-block-body">
+                                    <p>Tooplate provides a variety of free Bootstrap 5 website templates for your commercial or business websites.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="services-block-wrap col-lg-4 col-md-6 col-12 my-4 my-lg-0 my-md-0">
+                            <div class="services-block">
+                                <div class="services-block-title-wrap">
+                                    <i class="services-block-icon bi-twitch"></i>
+                                
+                                    <h4 class="services-block-title">Marketing</h4>
+                                </div>
+
+                                <div class="services-block-body">
+                                    <p>You can download any free template for your website. Please tell your friends about Tooplate.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="services-block-wrap col-lg-4 col-md-6 col-12">
+                            <div class="services-block">
+                                <div class="services-block-title-wrap">
+                                    <i class="services-block-icon bi-play-circle-fill"></i>
+                                
+                                    <h4 class="services-block-title">Video</h4>
+                                </div>
+
+                                <div class="services-block-body">
+                                    <p>You are not allowed to redistribute the template ZIP file on any other template collection website.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
 
             <section class="reviews-section section-padding">
                 <div class="container">
@@ -353,7 +274,7 @@ Bootstrap 5 HTML CSS Template
                                 <div class="reviews-thumb">
 
                                     <div class="reviews-info d-flex align-items-center">
-                                        <img src="images/avatar/portrait-beautiful-young-woman.jpg" class="avatar-image img-fluid" alt="">
+                                        <img src="images/avatar/portrait-beautiful-young-woman-studying-table-with-laptop-computer-notebook-home-studying-online-e-learning-system.jpg" class="avatar-image img-fluid" alt="">
 
                                         <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
                                             <p class="mb-0">
@@ -407,7 +328,7 @@ Bootstrap 5 HTML CSS Template
 
                                 <div class="reviews-thumb">
                                     <div class="reviews-info d-flex align-items-center">
-                                        <img src="images/avatar/university-study-abroad-lifestyle-concept.jpg" class="avatar-image img-fluid" alt="">
+                                        <img src="images/avatar/university-study-abroad-lifestyle-concept-satisfied-happy-asian-male-student-glasses-shirt-showing-thumbs-up-approval-likes-studying-college-holding-laptop-backpack.jpg" class="avatar-image img-fluid" alt="">
 
                                         <div class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
                                             <p class="mb-0">
@@ -448,7 +369,7 @@ Bootstrap 5 HTML CSS Template
                         <div class="col-lg-6 col-10">
                             <h2 class="text-white mb-2">Over 10k opening jobs</h2>
 
-                            <p class="text-white">If you are looking for free HTML templates, you may visit Tooplate website. If you need a collection of free templates, you can visit Too CSS website.</p>
+                            <p class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito adipcingi elit eismuod larehai</p>
                         </div>
 
                         <div class="col-lg-4 col-12 ms-auto">

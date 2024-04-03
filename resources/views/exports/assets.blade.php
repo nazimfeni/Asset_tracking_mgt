@@ -34,20 +34,19 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($assets as $asset)
-                <tr>
-                    <td>{{ $asset->id }}</td>
-                    <td>{{ $asset->asset_type_name }}</td>
-                    <td>{{ $asset->description }}</td>
-                    <td>{{ $asset->purchase_date }}</td>
-                    <td>{{ $asset->purchase_price }}</td>
-                    <td>{{ $asset->condition }}</td>
-                    <td>{{ $asset->location }}</td>
-                    <td>{{ $asset->used_by }}</td>
-                    <td>{{ $asset->status }}</td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+    @foreach ($assets as $asset)
+        <tr>
+            <td>{{ $asset->id }}</td>
+            <td>{{ optional($asset->assetType)->name }}</td>
+            <td>{{ $asset->description }}</td>
+            <td>{{ $asset->purchase_date }}</td>
+            <td>{{ $asset->purchase_price }}</td>
+            <td>{{ $asset->condition }}</td>
+            <td>{{ $asset->location }}</td>
+            <td>{{ $asset->used_by }}</td>
+            <td>{{ $asset->status }}</td>
+        </tr>
+    @endforeach
+</tbody>
 </body>
 </html>
