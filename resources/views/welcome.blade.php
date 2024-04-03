@@ -38,8 +38,46 @@ Bootstrap 5 HTML CSS Template
     </head>
     
     <body id="top">
-
     <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/assetlogo.png" class="img-fluid logo-image">
+            <div class="d-flex flex-column">
+                <strong class="logo-text">ATMS</strong>
+                <small class="logo-slogan">Asset Tracking System</small>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-center ms-lg-5">
+               
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About US</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+                <li class="nav-item ms-lg-auto">
+                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link custom-btn btn" href="{{ route('login') }}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
             <img src="images/assetlogo.png" class="img-fluid logo-image">
@@ -59,7 +97,7 @@ Bootstrap 5 HTML CSS Template
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
-            </ul>
+</ul>
             @if (Route::has('login'))
                 <ul class="navbar-nav ms-lg-auto">
                     @auth
@@ -71,7 +109,7 @@ Bootstrap 5 HTML CSS Template
                             <a href="{{ route('login') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Log in</a>
                         </li>
                         @if (Route::has('register'))
-                            <li class="nav-item">
+                            <li class="nav-item ms-lg-auto">
                                 <a href="{{ route('register') }}" class="nav-link font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Register</a>
                             </li>
                         @endif
@@ -80,7 +118,7 @@ Bootstrap 5 HTML CSS Template
             @endif
         </div>
     </div>
-</nav>
+</nav> -->
 
 
         <main>
