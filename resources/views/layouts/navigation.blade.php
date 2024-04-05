@@ -46,8 +46,9 @@
                             </x-slot>
                         </x-dropdown>
                  </div>
-             
-                
+                           
+                 <!-- dropdown -->
+                  
                     <x-nav-link :href="route('about')">
                         {{ __('About Us') }}
                     </x-nav-link>
