@@ -39,15 +39,15 @@
                                 <x-dropdown-link :href="route('assets.index')">
                                 {{ __('Asset List') }}
                                 </x-dropdown-link>
+                                <x-dropdown-link :href="route('asset-types.create')">
+                                {{ __('Asset Type Entry') }}
+                                </x-dropdown-link>
                             
                             </x-slot>
                         </x-dropdown>
                  </div>
              
-                    <x-nav-link :href="route('asset-types.create')">
-                        {{ __('Asset Type Entry') }}
-                    </x-nav-link>
-                    
+                
                     <x-nav-link :href="route('about')">
                         {{ __('About Us') }}
                     </x-nav-link>

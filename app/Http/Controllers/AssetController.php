@@ -102,31 +102,33 @@ class AssetController extends Controller
         }
     }
     public function filter(Request $request)
-{
-    // Validate request data
-    $request->validate([
-        'from_date' => 'nullable|date',
-        'to_date' => 'nullable|date',
-    ]);
+    {
+        echo "nakib";
+        
+        //// Validate request data
+        // $request->validate([
+        //     'from_date' => 'nullable|date',
+        //     'to_date' => 'nullable|date',
+        // ]);
 
-    // Retrieve assets based on the date range if provided
-    $query = Asset::query();
+        // // Retrieve assets based on the date range if provided
+        // $query = Asset::query();
+        
+        // if ($request->filled('from_date')) {
+        //     $query->where('purchase_date', '>=', $request->from_date);
+        // }
     
-    if ($request->filled('from_date')) {
-        $query->where('purchase_date', '>=', $request->from_date);
-    }
- 
-    if ($request->filled('to_date')) {
-        $query->where('purchase_date', '<=', $request->to_date);
-    }
- 
-    $assets = $query->paginate(10);
-     $assets = $query->get();
-
-    // Return the filtered assets to the index view
-    return view('assets.index', compact('assets'));
-}
-
-
+        // if ($request->filled('to_date')) {
+        //     $query->where('purchase_date', '<=', $request->to_date);
+        // }
     
+        // $assets = $query->paginate(10);
+        // $assets = $query->get();
+
+        // // Return the filtered assets to the index view
+        // return view('assets.index', compact('assets'));
+    }
+
+
+        
 }
